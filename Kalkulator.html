@@ -161,9 +161,9 @@
 					do {
 						iterasi++;
 						xr = (xl + xu) / 2;
-						fxl = Math.exp(xl) + xl;
-						fxu = Math.exp(xu) + xu;
-						fxr = Math.exp(xr) + xr;
+						fxl = Math.exp(-xl) - xl;
+						fxu = Math.exp(-xu) - xu;
+						fxr = Math.exp(-xr) - xr;
 
 						// cari nilai ea
 						if (xrBefore != "-") {

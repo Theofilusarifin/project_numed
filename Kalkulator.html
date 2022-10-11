@@ -20,6 +20,7 @@
         ></script>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://www.desmos.com/api/v1.7/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
 
         <!-- CSS Internal -->
         <style>
@@ -37,203 +38,254 @@
         </style>
     </head>
 
-    <body style="background: #161d31; color: #ffffff">
-        <div
-            class="card p-4 mx-5 rounded"
-            style="
-                background: #283046;
-                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-                float: left;
-                position: sticky;
-                top: 0;
-            "
-        >
-            <div class="card-header mb-2" style="background-color: #7367f0">
-                Project Developer
-            </div>
-            <div class="card-body">
-                <p>Theofilus Arifin</p>
-                <p>Jabesh Nehemiah Wijaya</p>
-                <p>Reynard Nathanael</p>
-                <p>Hans Wirjawan</p>
-            </div>
-        </div>
-        <div class="container">
-            <div
-                class="card p-4 mt-4 mb-4 rounded"
-                style="
-                    background: #283046;
-                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-                "
-            >
+    <body style="background: #161d31; color: #ffffff; overflow-x: hidden">
+        <div class="row">
+            <div class="col-3">
                 <div
-                    class="card-header mb-3 mx-3"
-                    style="background-color: #7367f0"
+                    class="card p-4 mx-5 rounded"
+                    style="
+                        background: #283046;
+                        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+                        position: sticky;
+                        top: 25px;
+                    "
                 >
-                    Calculation Method : Biseksi
+                    <div
+                        class="card-header mb-2"
+                        style="background-color: #7367f0"
+                    >
+                        Project Developer
+                    </div>
+                    <div class="card-body">
+                        <p>Theofilus Arifin</p>
+                        <p>Jabesh Nehemiah Wijaya</p>
+                        <p>Reynard Nathanael</p>
+                        <p>Hans Wirjawan</p>
+                    </div>
                 </div>
-                <div class="card-body">
-                    <!-- Initial Value -->
-                    <div class="row mb-4">
-                        <div class="col-6">
-                            <label for="lower-x" class="form-label fw-bold"
-                                >Lower X</label
-                            >
-                            <input
-                                type="number"
-                                class="form-control disable-character"
-                                id="lower-x"
-                                style="
-                                    color: white;
-                                    background: #283046;
-                                    border: 1px solid #7367f0;
-                                    border-radius: 5px;
-                                "
-                                placeholder="Input Lower X..."
-                            />
-                        </div>
-
-                        <div class="col-6">
-                            <label for="upper-x" class="form-label fw-bold"
-                                >Upper X</label
-                            >
-                            <input
-                                type="number"
-                                class="form-control disable-character"
-                                id="upper-x"
-                                style="
-                                    color: white;
-                                    background: #283046;
-                                    border: 1px solid #7367f0;
-                                    border-radius: 5px;
-                                "
-                                placeholder="Input Upper X..."
-                            />
-                        </div>
+            </div>
+            <div class="col-6">
+                <div
+                    class="card p-4 mt-4 mb-4 rounded"
+                    style="
+                        background: #283046;
+                        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+                    "
+                >
+                    <div
+                        class="card-header mb-3 mx-3"
+                        style="background-color: #7367f0"
+                    >
+                        Calculation Method : Biseksi
                     </div>
-
-                    <!-- Pilihan Kriteria Berhenti -->
-                    <div class="row">
-                        <div class="mb-3 fw-bold">Choose Stopping Criteria</div>
-
-                        <!-- Digit Signifikan -->
-                        <div class="row mb-2" style="min-height: 40px">
-                            <div class="col-2 d-flex align-items-center">
-                                <div class="form-check">
-                                    <input
-                                        class="form-check-input"
-                                        type="radio"
-                                        name="kriteria_berhenti"
-                                        id="digit-signifikan"
-                                    />
-                                    <label
-                                        class="form-check-label"
-                                        for="digit-signifikan"
-                                        >Digit Signifikan</label
-                                    >
-                                </div>
-                            </div>
-
-                            <div
-                                class="col-10 d-flex align-items-center d-none"
-                                id="digit-signifikan-part"
-                            >
-                                <label
-                                    for="n-value"
-                                    class="form-label"
-                                    style="display: inline"
-                                    >n&nbsp;&nbsp;=&nbsp;&nbsp;</label
+                    <div class="card-body">
+                        <!-- Initial Value -->
+                        <div class="row mb-4">
+                            <div class="col-6">
+                                <label for="lower-x" class="form-label fw-bold"
+                                    >Lower X</label
                                 >
                                 <input
                                     type="number"
-                                    class="form-control disable-keyboard"
-                                    id="n-value"
+                                    class="form-control disable-character"
+                                    id="lower-x"
                                     style="
                                         color: white;
                                         background: #283046;
                                         border: 1px solid #7367f0;
                                         border-radius: 5px;
-                                        display: inline;
-                                        width: 7%;
                                     "
-                                    min="0"
-                                    value="0"
+                                    placeholder="Input Lower X..."
                                 />
                             </div>
-                        </div>
 
-                        <!-- Maksimum Iterasi -->
-                        <div class="row" style="min-height: 40px">
-                            <div class="col-2 d-flex align-items-center">
-                                <div class="form-check">
-                                    <input
-                                        class="form-check-input"
-                                        type="radio"
-                                        name="kriteria_berhenti"
-                                        id="maksimum-iterasi"
-                                    />
-                                    <label
-                                        class="form-check-label form-inline"
-                                        for="maksimum-iterasi"
-                                        >Maksimum Iterasi</label
-                                    >
-                                </div>
-                            </div>
-
-                            <div
-                                class="col-10 d-flex align-items-center d-none"
-                                id="maksimum-iterasi-part"
-                            >
-                                <label
-                                    for="max-value"
-                                    class="form-label"
-                                    style="display: inline"
-                                    >max&nbsp;&nbsp;=&nbsp;&nbsp;</label
+                            <div class="col-6">
+                                <label for="upper-x" class="form-label fw-bold"
+                                    >Upper X</label
                                 >
                                 <input
                                     type="number"
-                                    class="form-control disable-keyboard"
-                                    id="max-value"
+                                    class="form-control disable-character"
+                                    id="upper-x"
                                     style="
                                         color: white;
                                         background: #283046;
                                         border: 1px solid #7367f0;
                                         border-radius: 5px;
-                                        display: inline;
-                                        width: 7%;
                                     "
-                                    min="1"
-                                    value="1"
+                                    placeholder="Input Upper X..."
                                 />
                             </div>
                         </div>
+
+                        <!-- Pilihan Kriteria Berhenti -->
+                        <div class="row">
+                            <div class="mb-3 fw-bold">
+                                Choose Stopping Criteria
+                            </div>
+
+                            <!-- Digit Signifikan -->
+                            <div class="row mb-2" style="min-height: 40px">
+                                <div class="col-2 d-flex align-items-center">
+                                    <div class="form-check">
+                                        <input
+                                            class="form-check-input"
+                                            type="radio"
+                                            name="kriteria_berhenti"
+                                            id="digit-signifikan"
+                                        />
+                                        <label
+                                            class="form-check-label"
+                                            for="digit-signifikan"
+                                            >Digit Signifikan</label
+                                        >
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="col-10 d-flex align-items-center d-none"
+                                    id="digit-signifikan-part"
+                                >
+                                    <label
+                                        for="n-value"
+                                        class="form-label"
+                                        style="display: inline"
+                                        >n&nbsp;&nbsp;=&nbsp;&nbsp;</label
+                                    >
+                                    <input
+                                        type="number"
+                                        class="form-control disable-keyboard"
+                                        id="n-value"
+                                        style="
+                                            color: white;
+                                            background: #283046;
+                                            border: 1px solid #7367f0;
+                                            border-radius: 5px;
+                                            display: inline;
+                                            width: 7%;
+                                        "
+                                        min="0"
+                                        value="0"
+                                    />
+                                </div>
+                            </div>
+
+                            <!-- Maksimum Iterasi -->
+                            <div class="row" style="min-height: 40px">
+                                <div class="col-2 d-flex align-items-center">
+                                    <div class="form-check">
+                                        <input
+                                            class="form-check-input"
+                                            type="radio"
+                                            name="kriteria_berhenti"
+                                            id="maksimum-iterasi"
+                                        />
+                                        <label
+                                            class="form-check-label form-inline"
+                                            for="maksimum-iterasi"
+                                            >Maksimum Iterasi</label
+                                        >
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="col-10 d-flex align-items-center d-none"
+                                    id="maksimum-iterasi-part"
+                                >
+                                    <label
+                                        for="max-value"
+                                        class="form-label"
+                                        style="display: inline"
+                                        >max&nbsp;&nbsp;=&nbsp;&nbsp;</label
+                                    >
+                                    <input
+                                        type="number"
+                                        class="form-control disable-keyboard"
+                                        id="max-value"
+                                        style="
+                                            color: white;
+                                            background: #283046;
+                                            border: 1px solid #7367f0;
+                                            border-radius: 5px;
+                                            display: inline;
+                                            width: 7%;
+                                        "
+                                        min="1"
+                                        value="1"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Button Calculate -->
+                        <button
+                            type="button"
+                            class="btn btn-primary w-100 mt-3 mb-2"
+                            style="background: #7367f0"
+                            onclick="calculate()"
+                        >
+                            Calculate
+                        </button>
+
+                        <!-- Output Tabel -->
+                        <table
+                            class="table table-bordered text-center mb-4"
+                            style="color: white"
+                            id="tablehasil"
+                        >
+                            <thead></thead>
+                            <tbody></tbody>
+                        </table>
+
+                        <!-- Kesimpulan -->
+                        <div id="kesimpulan"></div>
                     </div>
-
-                    <!-- Button Calculate -->
-                    <button
-                        type="button"
-                        class="btn btn-primary w-100 mt-3 mb-2"
-                        style="background: #7367f0"
-                        onclick="calculate()"
+                </div>
+            </div>
+            <div class="col-3">
+                <div
+                    class="card p-4 mx-5 rounded"
+                    style="
+                        background: #283046;
+                        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+                        position: sticky;
+                        top: 25px;
+                    "
+                >
+                    <div
+                        class="card-header mb-2"
+                        style="background-color: #7367f0"
                     >
-                        Calculate
-                    </button>
-
-                    <!-- Output Tabel -->
-                    <table
-                        class="table table-bordered text-center mb-4"
-                        style="color: white"
-                        id="tablehasil"
-                    >
-                        <thead></thead>
-                        <tbody></tbody>
-                    </table>
-
-                    <!-- Kesimpulan -->
-                    <div id="kesimpulan"></div>
+                        Equation Graph
+                    </div>
+                    <div class="card-body" id="graph-equation">
+                        <p class="d-flex" id="warning_calculator">
+                            Lakukan Calculation Terlebih Dahulu!
+                        </p>
+                        <div
+                            class="d-none"
+                            id="calculator"
+                            style="width: 100%; height: 300px"
+                        ></div>
+                    </div>
                 </div>
             </div>
         </div>
+
+        <script>
+            var elt = document.getElementById("calculator");
+            var calculator = Desmos.GraphingCalculator(elt, {
+                keypad: false,
+                expressions: false,
+                settingsMenu: false,
+            });
+            calculator.setExpression({
+                id: "graph1",
+                latex: "y=e^{-x}-x",
+                color: "#662de0",
+                lineWidth: 3,
+            });
+        </script>
 
         <script>
             // cek tebakan awal
@@ -291,6 +343,22 @@
                     nValue;
                 let sukses = true;
 
+                calculator.setExpression({
+                    id: "xl",
+                    latex: `x=${xl}`,
+                    color: "#FF0000",
+                    lineWidth: 3,
+                    lineStyle: Desmos.Styles.DASHED,
+                });
+
+                calculator.setExpression({
+                    id: "xu",
+                    latex: `x=${xu}`,
+                    color: "#FF0000",
+                    lineWidth: 3,
+                    lineStyle: Desmos.Styles.DASHED,
+                });
+
                 if (document.querySelector("#digit-signifikan").checked) {
                     nValue = parseInt(document.querySelector("#n-value").value);
                     es = 0.5 * Math.pow(10, 2 - nValue);
@@ -345,7 +413,15 @@
                                 5
                             )}</b> sebagai nilai pendekatan sebanyak <b>${nValue}</b> digit signifikan`
                         );
+
+                        // Tambahkan Graph Disini
+                        $("#calculator").attr("class", "d-flex");
+                        $("#warning_calculator").attr("class", "d-none");
                     } else {
+                        // Tambahkan warning dan hilangkan graph
+                        $("#calculator").attr("class", "d-none");
+                        $("#warning_calculator").attr("class", "d-flex");
+
                         $("#kesimpulan").html(
                             `<span class="text-danger">Kesimpulan</span> : Persamaan e<sup>-x</sup>-x yang menggunakan metode tertutup <b>Biseksi</b> dengan kriteria tebakan awal <b>${xlInit}</b> dan <b>${xuInit}</b> tidak memiliki solusi karena f(xu) x f(xl) > 0`
                         );
@@ -364,7 +440,7 @@
                         fxu = Math.exp(-xu) - xu;
                         fxr = Math.exp(-xr) - xr;
 
-						if (!cekTebakan(fxl, fxu)) {
+                        if (!cekTebakan(fxl, fxu)) {
                             sukses = false;
                             break;
                         }
@@ -405,7 +481,15 @@
                         $("#kesimpulan").html(
                             `<span class="text-danger">Kesimpulan</span> : Salah satu akar dari persamaan e<sup>-x</sup>-x yang menggunakan metode tertutup <b>Biseksi</b> dengan kriteria tebakan awal <b>${xlInit}</b> dan <b>${xuInit}</b> diperoleh <b>${xr.toFixed()}</b> sebagai nilai pendekatan dari <b>${iterasi}</b> iterasi`
                         );
+
+                        // Tambahkan Graph Disini
+                        $("#calculator").attr("class", "d-flex");
+                        $("#warning_calculator").attr("class", "d-none");
                     } else {
+                        // Tambahkan warning dan hilangkan graph
+                        $("#calculator").attr("class", "d-none");
+                        $("#warning_calculator").attr("class", "d-flex");
+
                         $("#kesimpulan").html(
                             `<span class="text-danger">Kesimpulan</span> : Persamaan e<sup>-x</sup>-x yang menggunakan metode tertutup <b>Biseksi</b> dengan kriteria tebakan awal <b>${xlInit}</b> dan <b>${xuInit}</b> tidak memiliki solusi karena f(xu) x f(xl) > 0`
                         );

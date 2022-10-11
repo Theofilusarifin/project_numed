@@ -1,183 +1,325 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Numerical Method Project</title>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Numerical Method Project</title>
 
-		<!-- Bootstrap Resource -->
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <!-- Bootstrap Resource -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+            crossorigin="anonymous"
+        />
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"
+        ></script>
 
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-		<!-- CSS Internal -->
-		<style>
-			@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+        <!-- CSS Internal -->
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
-			* {
-				box-sizing: border-box;
-				font-family: "Montserrat", sans-serif;
-			}
+            * {
+                box-sizing: border-box;
+                font-family: "Montserrat", sans-serif;
+            }
 
-			.form-check-input:checked {
-				background-color: #7367f0 !important;
-				border-color: #7367f0 !important;
-			}
-		</style>
-	</head>
+            .form-check-input:checked {
+                background-color: #7367f0 !important;
+                border-color: #7367f0 !important;
+            }
+        </style>
+    </head>
 
-	<body style="background: #161d31; color: #ffffff">
-		<div class="card p-4 mx-5 rounded" style="background: #283046; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); float:left; position: sticky; top: 0;">
-			<div class="card-header mb-2" style="background-color: #7367f0">Project Developer</div>
-			<div class="card-body">
-				<p>Theofilus Arifin</p>
-				<p>Jabesh Nehemiah</p>
-				<p>Reynard Nathanael</p>
-				<p>Hans Wirjawan</p>
-			</div>
-		</div>
-		<div class="container">
-			<div class="card p-4 mt-4 mb-4 rounded" style="background: #283046; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2)">
-				<div class="card-header mb-3 mx-3" style="background-color: #7367f0">Calculation Method : Biseksi</div>
-				<div class="card-body">
-					<!-- Initial Value -->
-					<div class="row mb-4">
-						<div class="col-6">
-							<label for="lower-x" class="form-label fw-bold">Lower X</label>
-							<input type="number" class="form-control disable-character" id="lower-x" style="color: white; background: #283046; border: 1px solid #7367f0; border-radius: 5px" placeholder="Input Lower X..." />
-						</div>
+    <body style="background: #161d31; color: #ffffff">
+        <div
+            class="card p-4 mx-5 rounded"
+            style="
+                background: #283046;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+                float: left;
+                position: sticky;
+                top: 0;
+            "
+        >
+            <div class="card-header mb-2" style="background-color: #7367f0">
+                Project Developer
+            </div>
+            <div class="card-body">
+                <p>Theofilus Arifin</p>
+                <p>Jabesh Nehemiah Wijaya</p>
+                <p>Reynard Nathanael</p>
+                <p>Hans Wirjawan</p>
+            </div>
+        </div>
+        <div class="container">
+            <div
+                class="card p-4 mt-4 mb-4 rounded"
+                style="
+                    background: #283046;
+                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+                "
+            >
+                <div
+                    class="card-header mb-3 mx-3"
+                    style="background-color: #7367f0"
+                >
+                    Calculation Method : Biseksi
+                </div>
+                <div class="card-body">
+                    <!-- Initial Value -->
+                    <div class="row mb-4">
+                        <div class="col-6">
+                            <label for="lower-x" class="form-label fw-bold"
+                                >Lower X</label
+                            >
+                            <input
+                                type="number"
+                                class="form-control disable-character"
+                                id="lower-x"
+                                style="
+                                    color: white;
+                                    background: #283046;
+                                    border: 1px solid #7367f0;
+                                    border-radius: 5px;
+                                "
+                                placeholder="Input Lower X..."
+                            />
+                        </div>
 
-						<div class="col-6">
-							<label for="upper-x" class="form-label fw-bold">Upper X</label>
-							<input type="number" class="form-control disable-character" id="upper-x" style="color: white; background: #283046; border: 1px solid #7367f0; border-radius: 5px" placeholder="Input Upper X..." />
-						</div>
-					</div>
+                        <div class="col-6">
+                            <label for="upper-x" class="form-label fw-bold"
+                                >Upper X</label
+                            >
+                            <input
+                                type="number"
+                                class="form-control disable-character"
+                                id="upper-x"
+                                style="
+                                    color: white;
+                                    background: #283046;
+                                    border: 1px solid #7367f0;
+                                    border-radius: 5px;
+                                "
+                                placeholder="Input Upper X..."
+                            />
+                        </div>
+                    </div>
 
-					<!-- Pilihan Kriteria Berhenti -->
-					<div class="row">
-						<div class="mb-3 fw-bold">Choose Stopping Criteria</div>
+                    <!-- Pilihan Kriteria Berhenti -->
+                    <div class="row">
+                        <div class="mb-3 fw-bold">Choose Stopping Criteria</div>
 
-						<!-- Digit Signifikan -->
-						<div class="row mb-2" style="min-height: 40px">
-							<div class="col-2 d-flex align-items-center">
-								<div class="form-check">
-									<input class="form-check-input" type="radio" name="kriteria_berhenti" id="digit-signifikan" />
-									<label class="form-check-label" for="digit-signifikan">Digit Signifikan</label>
-								</div>
-							</div>
+                        <!-- Digit Signifikan -->
+                        <div class="row mb-2" style="min-height: 40px">
+                            <div class="col-2 d-flex align-items-center">
+                                <div class="form-check">
+                                    <input
+                                        class="form-check-input"
+                                        type="radio"
+                                        name="kriteria_berhenti"
+                                        id="digit-signifikan"
+                                    />
+                                    <label
+                                        class="form-check-label"
+                                        for="digit-signifikan"
+                                        >Digit Signifikan</label
+                                    >
+                                </div>
+                            </div>
 
-							<div class="col-10 d-flex align-items-center d-none" id="digit-signifikan-part">
-								<label for="n-value" class="form-label" style="display: inline">n&nbsp;&nbsp;=&nbsp;&nbsp;</label>
-								<input
-									type="number"
-									class="form-control disable-keyboard"
-									id="n-value"
-									style="color: white; background: #283046; border: 1px solid #7367f0; border-radius: 5px; display: inline; width: 7%"
-									min="0"
-									value="0"
-								/>
-							</div>
-						</div>
+                            <div
+                                class="col-10 d-flex align-items-center d-none"
+                                id="digit-signifikan-part"
+                            >
+                                <label
+                                    for="n-value"
+                                    class="form-label"
+                                    style="display: inline"
+                                    >n&nbsp;&nbsp;=&nbsp;&nbsp;</label
+                                >
+                                <input
+                                    type="number"
+                                    class="form-control disable-keyboard"
+                                    id="n-value"
+                                    style="
+                                        color: white;
+                                        background: #283046;
+                                        border: 1px solid #7367f0;
+                                        border-radius: 5px;
+                                        display: inline;
+                                        width: 7%;
+                                    "
+                                    min="0"
+                                    value="0"
+                                />
+                            </div>
+                        </div>
 
-						<!-- Maksimum Iterasi -->
-						<div class="row" style="min-height: 40px">
-							<div class="col-2 d-flex align-items-center">
-								<div class="form-check">
-									<input class="form-check-input" type="radio" name="kriteria_berhenti" id="maksimum-iterasi" />
-									<label class="form-check-label form-inline" for="maksimum-iterasi">Maksimum Iterasi</label>
-								</div>
-							</div>
+                        <!-- Maksimum Iterasi -->
+                        <div class="row" style="min-height: 40px">
+                            <div class="col-2 d-flex align-items-center">
+                                <div class="form-check">
+                                    <input
+                                        class="form-check-input"
+                                        type="radio"
+                                        name="kriteria_berhenti"
+                                        id="maksimum-iterasi"
+                                    />
+                                    <label
+                                        class="form-check-label form-inline"
+                                        for="maksimum-iterasi"
+                                        >Maksimum Iterasi</label
+                                    >
+                                </div>
+                            </div>
 
-							<div class="col-10 d-flex align-items-center d-none" id="maksimum-iterasi-part">
-								<label for="max-value" class="form-label" style="display: inline">max&nbsp;&nbsp;=&nbsp;&nbsp;</label>
-								<input
-									type="number"
-									class="form-control disable-keyboard"
-									id="max-value"
-									style="color: white; background: #283046; border: 1px solid #7367f0; border-radius: 5px; display: inline; width: 7%"
-									min="1"
-									value="1"
-								/>
-							</div>
-						</div>
-					</div>
+                            <div
+                                class="col-10 d-flex align-items-center d-none"
+                                id="maksimum-iterasi-part"
+                            >
+                                <label
+                                    for="max-value"
+                                    class="form-label"
+                                    style="display: inline"
+                                    >max&nbsp;&nbsp;=&nbsp;&nbsp;</label
+                                >
+                                <input
+                                    type="number"
+                                    class="form-control disable-keyboard"
+                                    id="max-value"
+                                    style="
+                                        color: white;
+                                        background: #283046;
+                                        border: 1px solid #7367f0;
+                                        border-radius: 5px;
+                                        display: inline;
+                                        width: 7%;
+                                    "
+                                    min="1"
+                                    value="1"
+                                />
+                            </div>
+                        </div>
+                    </div>
 
-					<!-- Button Calculate -->
-					<button type="button" class="btn btn-primary w-100 mt-3 mb-2" style="background: #7367f0" onclick="calculate()">Calculate</button>
+                    <!-- Button Calculate -->
+                    <button
+                        type="button"
+                        class="btn btn-primary w-100 mt-3 mb-2"
+                        style="background: #7367f0"
+                        onclick="calculate()"
+                    >
+                        Calculate
+                    </button>
 
-					<!-- Output Tabel -->
-					<table class="table table-bordered text-center mb-4" style="color: white" id="tablehasil">
-						<thead></thead>
-						<tbody></tbody>
-					</table>
+                    <!-- Output Tabel -->
+                    <table
+                        class="table table-bordered text-center mb-4"
+                        style="color: white"
+                        id="tablehasil"
+                    >
+                        <thead></thead>
+                        <tbody></tbody>
+                    </table>
 
-					<!-- Kesimpulan -->
-					<div id="kesimpulan"></div>
-				</div>
-			</div>
-		</div>
+                    <!-- Kesimpulan -->
+                    <div id="kesimpulan"></div>
+                </div>
+            </div>
+        </div>
 
-		<script>
-			// event klik radio digit signifikan
-			document.querySelector("#digit-signifikan").onclick = () => {
-				document.querySelector("#digit-signifikan-part").classList.remove("d-none");
-				document.querySelector("#digit-signifikan-part").classList.add("d-flex");
-				document.querySelector("#maksimum-iterasi-part").classList.remove("d-flex");
-				document.querySelector("#maksimum-iterasi-part").classList.add("d-none");
-				document.querySelector("#n-value").value = 0;
-			};
+        <script>
+            // cek tebakan awal
+            function cekTebakan(fxl, fxu) {
+                return fxl * fxu < 0;
+            }
+            // event klik radio digit signifikan
+            document.querySelector("#digit-signifikan").onclick = () => {
+                document
+                    .querySelector("#digit-signifikan-part")
+                    .classList.remove("d-none");
+                document
+                    .querySelector("#digit-signifikan-part")
+                    .classList.add("d-flex");
+                document
+                    .querySelector("#maksimum-iterasi-part")
+                    .classList.remove("d-flex");
+                document
+                    .querySelector("#maksimum-iterasi-part")
+                    .classList.add("d-none");
+                document.querySelector("#n-value").value = 0;
+            };
 
-			// event klik radio maksimum iterasi
-			document.querySelector("#maksimum-iterasi").onclick = () => {
-				document.querySelector("#digit-signifikan-part").classList.remove("d-flex");
-				document.querySelector("#digit-signifikan-part").classList.add("d-none");
-				document.querySelector("#maksimum-iterasi-part").classList.remove("d-none");
-				document.querySelector("#maksimum-iterasi-part").classList.add("d-flex");
-				document.querySelector("#max-value").value = 1;
-			};
+            // event klik radio maksimum iterasi
+            document.querySelector("#maksimum-iterasi").onclick = () => {
+                document
+                    .querySelector("#digit-signifikan-part")
+                    .classList.remove("d-flex");
+                document
+                    .querySelector("#digit-signifikan-part")
+                    .classList.add("d-none");
+                document
+                    .querySelector("#maksimum-iterasi-part")
+                    .classList.remove("d-none");
+                document
+                    .querySelector("#maksimum-iterasi-part")
+                    .classList.add("d-flex");
+                document.querySelector("#max-value").value = 1;
+            };
 
-			const metodeBiseksi = () => {
-				let xl = parseInt(document.querySelector("#lower-x").value);
-				let xu = parseInt(document.querySelector("#upper-x").value);
-				let xlInit = xl,
-					xuInit = xu;
-				let iterasi = 0;
-				let xr,
-					fxl,
-					fxu,
-					fxr,
-					xrBefore = "-",
-					ea = 0,
-					es,
-					eaOutput,
-					nValue;
+            const metodeBiseksi = () => {
+                let xl = parseInt(document.querySelector("#lower-x").value);
+                let xu = parseInt(document.querySelector("#upper-x").value);
+                let xlInit = xl,
+                    xuInit = xu;
+                let iterasi = 0;
+                let xr,
+                    fxl,
+                    fxu,
+                    fxr,
+                    xrBefore = "-",
+                    ea = 0,
+                    es,
+                    eaOutput,
+                    nValue;
+                let sukses = true;
 
-				if (document.querySelector("#digit-signifikan").checked) {
-					nValue = parseInt(document.querySelector("#n-value").value);
-					es = 0.5 * Math.pow(10, 2 - nValue);
+                if (document.querySelector("#digit-signifikan").checked) {
+                    nValue = parseInt(document.querySelector("#n-value").value);
+                    es = 0.5 * Math.pow(10, 2 - nValue);
 
-					do {
-						iterasi++;
-						xr = (xl + xu) / 2;
-						fxl = Math.exp(-xl) - xl;
-						fxu = Math.exp(-xu) - xu;
-						fxr = Math.exp(-xr) - xr;
+                    do {
+                        iterasi++;
+                        xr = (xl + xu) / 2;
+                        fxl = Math.exp(-xl) - xl;
+                        fxu = Math.exp(-xu) - xu;
+                        fxr = Math.exp(-xr) - xr;
 
-						// cari nilai ea
-						if (xrBefore != "-") {
-							ea = Math.abs(((xr - xrBefore) / xr) * 100);
-						}
+                        if (!cekTebakan(fxl, fxu)) {
+                            sukses = false;
+                            break;
+                        }
 
-						// cetak baris ke tabel
-						if (iterasi == 1) {
-							eaOutput = `<td>-</td></tr>`;
-						} else {
-							eaOutput = `<td>${ea.toFixed(5)}</td></tr>`;
-						}
+                        // cari nilai ea
+                        if (xrBefore != "-") {
+                            ea = Math.abs(((xr - xrBefore) / xr) * 100);
+                        }
 
-						$("tbody").append(`
+                        // cetak baris ke tabel
+                        if (iterasi == 1) {
+                            eaOutput = `<td>-</td></tr>`;
+                        } else {
+                            eaOutput = `<td>${ea.toFixed(5)}</td></tr>`;
+                        }
+
+                        $("tbody").append(`
                         <tr>
                             <td>${iterasi}</td>
                             <td>${xl.toFixed(5)}</td>
@@ -189,42 +331,57 @@
                             ${eaOutput}
                     `);
 
-						// Tentukan nilai di iterasi selanjutnya
-						xrBefore = xr;
-						xl = fxl * fxr > 0 ? xr : xl;
-						xu = fxl * fxr < 0 ? xr : xu;
+                        // Tentukan nilai di iterasi selanjutnya
+                        xrBefore = xr;
+                        xl = fxl * fxr > 0 ? xr : xl;
+                        xu = fxl * fxr < 0 ? xr : xu;
 
-						if (fxl * fxr == 0) break;
-					} while (ea >= es || iterasi == 1);
+                        if (fxl * fxr == 0) break;
+                    } while (ea >= es || iterasi == 1);
 
-					$("#kesimpulan").html(
-						`<span class="text-danger">Kesimpulan</span> : Perhitungan akar persamaan menggunakan metode <b>Biseksi</b> dengan tebakan awal <b>${xlInit}</b> dan <b>${xuInit}</b> dengan menetapkan kriteria berhenti yaitu <b>digit signifikan</b> dengan nilai n adalah <b>${nValue}</b> menghasilkan proses iterasi sebanyak <b>${iterasi}</b> dengan nilai pendekatan dari persamaan ini yaitu <b>${xr.toFixed(
-							5
-						)}</b>`
-					);
-				} else if (document.querySelector("#maksimum-iterasi").checked) {
-					let maxIteration = parseInt(document.querySelector("#max-value").value);
+                    if (sukses) {
+                        $("#kesimpulan").html(
+                            `<span class="text-danger">Kesimpulan</span> : Salah satu akar dari persamaan e<sup>-x</sup>-x yang menggunakan metode tertutup <b>Biseksi</b> dengan kriteria tebakan awal <b>${xlInit}</b> dan <b>${xuInit}</b> diperoleh <b>${xr.toFixed(
+                                5
+                            )}</b> sebagai nilai pendekatan sebanyak <b>${nValue}</b> digit signifikan`
+                        );
+                    } else {
+                        $("#kesimpulan").html(
+                            `<span class="text-danger">Kesimpulan</span> : Persamaan e<sup>-x</sup>-x yang menggunakan metode tertutup <b>Biseksi</b> dengan kriteria tebakan awal <b>${xlInit}</b> dan <b>${xuInit}</b> tidak memiliki solusi karena f(xu) x f(xl) > 0`
+                        );
+                    }
+                } else if (
+                    document.querySelector("#maksimum-iterasi").checked
+                ) {
+                    let maxIteration = parseInt(
+                        document.querySelector("#max-value").value
+                    );
 
-					do {
-						iterasi++;
-						xr = (xl + xu) / 2;
-						fxl = Math.exp(-xl) - xl;
-						fxu = Math.exp(-xu) - xu;
-						fxr = Math.exp(-xr) - xr;
+                    do {
+                        iterasi++;
+                        xr = (xl + xu) / 2;
+                        fxl = Math.exp(-xl) - xl;
+                        fxu = Math.exp(-xu) - xu;
+                        fxr = Math.exp(-xr) - xr;
 
-						// cari nilai ea
-						if (xrBefore != "-") {
-							ea = Math.abs(((xr - xrBefore) / xr) * 100);
-						}
+						if (!cekTebakan(fxl, fxu)) {
+                            sukses = false;
+                            break;
+                        }
 
-						// cetak baris ke tabel
-						if (iterasi == 1) {
-							eaOutput = `<td>-</td></tr>`;
-						} else {
-							eaOutput = `<td>${ea.toFixed(5)}</td></tr>`;
-						}
+                        // cari nilai ea
+                        if (xrBefore != "-") {
+                            ea = Math.abs(((xr - xrBefore) / xr) * 100);
+                        }
 
-						$("tbody").append(`
+                        // cetak baris ke tabel
+                        if (iterasi == 1) {
+                            eaOutput = `<td>-</td></tr>`;
+                        } else {
+                            eaOutput = `<td>${ea.toFixed(5)}</td></tr>`;
+                        }
+
+                        $("tbody").append(`
                         <tr>
                             <td>${iterasi}</td>
                             <td>${xl.toFixed(5)}</td>
@@ -236,34 +393,41 @@
                             ${eaOutput}
                     `);
 
-						// Tentukan nilai di iterasi selanjutnya
-						xrBefore = xr;
-						xl = fxl * fxr > 0 ? xr : xl;
-						xu = fxl * fxr < 0 ? xr : xu;
+                        // Tentukan nilai di iterasi selanjutnya
+                        xrBefore = xr;
+                        xl = fxl * fxr > 0 ? xr : xl;
+                        xu = fxl * fxr < 0 ? xr : xu;
 
-						if (fxl * fxr == 0) break;
-					} while (iterasi < maxIteration);
+                        if (fxl * fxr == 0) break;
+                    } while (iterasi < maxIteration);
 
-					$("#kesimpulan").html(
-						`Kesimpulan : Perhitungan akar persamaan menggunakan metode <b>Biseksi</b> dengan tebakan awal <b>${xlInit}</b> dan <b>${xuInit}</b> dengan menetapkan kriteria berhenti yaitu <b>maksimum iterasi</b> dengan nilai max adalah <b>${maxIteration}</b> menghasilkan proses iterasi sebanyak <b>${iterasi}</b> dengan nilai pendekatan dari persamaan ini yaitu <b>${xr.toFixed(
-							5
-						)}</b>`
-					);
-				}
-			};
+                    if (sukses) {
+                        $("#kesimpulan").html(
+                            `<span class="text-danger">Kesimpulan</span> : Salah satu akar dari persamaan e<sup>-x</sup>-x yang menggunakan metode tertutup <b>Biseksi</b> dengan kriteria tebakan awal <b>${xlInit}</b> dan <b>${xuInit}</b> diperoleh <b>${xr.toFixed()}</b> sebagai nilai pendekatan dari <b>${iterasi}</b> iterasi`
+                        );
+                    } else {
+                        $("#kesimpulan").html(
+                            `<span class="text-danger">Kesimpulan</span> : Persamaan e<sup>-x</sup>-x yang menggunakan metode tertutup <b>Biseksi</b> dengan kriteria tebakan awal <b>${xlInit}</b> dan <b>${xuInit}</b> tidak memiliki solusi karena f(xu) x f(xl) > 0`
+                        );
+                    }
+                }
+            };
 
-			// Kalkulasi
-			const calculate = () => {
-				const metodePerhitungan = 1;
-				$("thead").html("");
-				$("tbody").html("");
+            /// Kalkulasi
+            const calculate = () => {
+                const metodePerhitungan = 1;
+                $("thead").html("");
+                $("tbody").html("");
 
-				// Validasi
-				if (document.querySelector("#lower-x").value == "" || document.querySelector("#lower-x").value == "") {
-					alert("Nilai Lower X atau Upper X belum diisi!");
-				} else {
-					document.querySelector("#tablehasil").classList.add("mt-4");
-					$("thead").append(`
+                /// Validasi
+                if (
+                    document.querySelector("#lower-x").value == "" ||
+                    document.querySelector("#lower-x").value == ""
+                ) {
+                    alert("Nilai Lower X atau Upper X belum diisi!");
+                } else {
+                    document.querySelector("#tablehasil").classList.add("mt-4");
+                    $("thead").append(`
                     <tr>
                         <th scope="col">Iterasi</th>
                         <th scope="col">xl</th>
@@ -276,26 +440,26 @@
                     </tr>
                 `);
 
-					if (metodePerhitungan == 1) {
-						metodeBiseksi();
-					}
-				}
-			};
+                    if (metodePerhitungan == 1) {
+                        metodeBiseksi();
+                    }
+                }
+            };
 
-			// Disable keydown di inputan kriteria berhenti
-			$(document).on("keydown", ".disable-keyboard", function (e) {
-				return false;
-			});
+            // Disable keydown di inputan kriteria berhenti
+            $(document).on("keydown", ".disable-keyboard", function (e) {
+                return false;
+            });
 
-			// Disable keydown di inputan kriteria berhenti
-			$(document).on("keydown", ".disable-character", function (e) {
-				if (e.keyCode == 188) return false;
-				if (e.keyCode == 190) return false;
-				if (e.keyCode == 69) return false;
-				if (e.keyCode == 187) return false;
-				if (e.keyCode == 107) return false;
-				if (e.keyCode == 109) return false;
-			});
-		</script>
-	</body>
+            // Disable keydown di inputan kriteria berhenti
+            $(document).on("keydown", ".disable-character", function (e) {
+                if (e.keyCode == 188) return false;
+                if (e.keyCode == 190) return false;
+                if (e.keyCode == 69) return false;
+                if (e.keyCode == 187) return false;
+                if (e.keyCode == 107) return false;
+                if (e.keyCode == 109) return false;
+            });
+        </script>
+    </body>
 </html>

@@ -409,7 +409,7 @@
 
                     if (sukses) {
                         $("#kesimpulan").html(
-                            `<span class="text-danger">Kesimpulan</span> : Salah satu akar dari persamaan e<sup>-x</sup>-x yang menggunakan metode tertutup <b>Biseksi</b> dengan kriteria tebakan awal <b>${xlInit}</b> dan <b>${xuInit}</b> diperoleh <b>${xr.toFixed(
+                            `<span class="text-danger">Kesimpulan</span> : Salah satu akar dari persamaan e<sup>-x</sup>-x=0 yang menggunakan metode tertutup <b>Biseksi</b> dengan kriteria tebakan awal <b>${xlInit}</b> dan <b>${xuInit}</b> diperoleh <b>${xr.toFixed(
                                 5
                             )}</b> sebagai nilai pendekatan sebanyak <b>${nValue}</b> digit signifikan`
                         );
@@ -423,7 +423,7 @@
                         $("#warning_calculator").attr("class", "d-flex");
 
                         $("#kesimpulan").html(
-                            `<span class="text-danger">Kesimpulan</span> : Persamaan e<sup>-x</sup>-x yang menggunakan metode tertutup <b>Biseksi</b> dengan kriteria tebakan awal <b>${xlInit}</b> dan <b>${xuInit}</b> tidak memiliki solusi karena f(xu) × f(xl) > 0`
+                            `<span class="text-danger">Kesimpulan</span> : Persamaan e<sup>-x</sup>-x=0 yang menggunakan metode tertutup <b>Biseksi</b> dengan kriteria tebakan awal <b>${xlInit}</b> dan <b>${xuInit}</b> tidak memiliki solusi karena f(xu) × f(xl) > 0`
                         );
                     }
                 } else if (
@@ -479,7 +479,7 @@
 
                     if (sukses) {
                         $("#kesimpulan").html(
-                            `<span class="text-danger">Kesimpulan</span> : Salah satu akar dari persamaan e<sup>-x</sup>-x yang menggunakan metode tertutup <b>Biseksi</b> dengan kriteria tebakan awal <b>${xlInit}</b> dan <b>${xuInit}</b> diperoleh <b>${xr.toFixed()}</b> sebagai nilai pendekatan dari <b>${iterasi}</b> iterasi`
+                            `<span class="text-danger">Kesimpulan</span> : Salah satu akar dari persamaan e<sup>-x</sup>-x=0 yang menggunakan metode tertutup <b>Biseksi</b> dengan kriteria tebakan awal <b>${xlInit}</b> dan <b>${xuInit}</b> diperoleh <b>${xr.toFixed()}</b> sebagai nilai pendekatan dari <b>${iterasi}</b> iterasi`
                         );
 
                         // Tambahkan Graph Disini
@@ -491,7 +491,7 @@
                         $("#warning_calculator").attr("class", "d-flex");
 
                         $("#kesimpulan").html(
-                            `<span class="text-danger">Kesimpulan</span> : Persamaan e<sup>-x</sup>-x yang menggunakan metode tertutup <b>Biseksi</b> dengan kriteria tebakan awal <b>${xlInit}</b> dan <b>${xuInit}</b> tidak memiliki solusi karena f(xu) × f(xl) > 0`
+                            `<span class="text-danger">Kesimpulan</span> : Persamaan e<sup>-x</sup>-x=0 yang menggunakan metode tertutup <b>Biseksi</b> dengan kriteria tebakan awal <b>${xlInit}</b> dan <b>${xuInit}</b> tidak memiliki solusi karena f(xu) × f(xl) > 0`
                         );
                     }
                 }
